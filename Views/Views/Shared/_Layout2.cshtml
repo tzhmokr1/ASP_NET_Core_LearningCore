@@ -1,0 +1,29 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Layout 2</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <br /><br />
+
+        <h1>Layout 2</h1>
+
+        @*@RenderSection("Fruit", false)*@
+
+        @if (IsSectionDefined("Fruit"))
+        {
+            @RenderSection("Fruit")
+        } else
+        {
+            <h3>No fruit section here.</h3>
+        }
+
+        <hr />
+
+        @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

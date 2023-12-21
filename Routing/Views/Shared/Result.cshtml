@@ -1,0 +1,60 @@
+﻿@{ 
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Routing</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <br /><br />
+        
+        <p><b>Controller:</b> @ViewBag.Controller </p>
+        <br />
+
+        <p><b>Action:</b> @ViewBag.Action </p>
+
+        @if (ViewBag.ID != null) {
+            <p><b>ID:</b> @ViewBag.ID </p>
+        }
+
+        @if (ViewBag.All != null) {
+            <p><b>All:</b> @ViewBag.All </p>
+        }
+
+        <hr />
+
+        <a href="/home/index">Home index</a> <br />
+        <a asp-controller="Home" asp-action="Index">Home index</a> <br />
+        <a asp-controller="Home" asp-action="Blog">Home blog</a> <br />
+        <a asp-controller="Admin" asp-action="Index">Admin index</a> <br />
+
+        <hr />
+
+        <a asp-controller="Home" asp-action="ThirdSegment" asp-route-id="3">ThirdSegment</a> <br />
+        <a asp-controller="Admin" asp-action="Index" asp-fragment="someFragment">Admin index Fragment</a> <br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <div id="someFragment">some fragment</div>
+    </div>
+</body>
+</html>
